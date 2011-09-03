@@ -1,0 +1,8 @@
+*.rbc
+*.bak
+doc/app
+/.bundle
+/Gemfile.lock
+/Gemfile.local
+/.rvmrc*
+.DS_Store

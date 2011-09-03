@@ -1,0 +1,55 @@
+= redmine_js_syntax_highlighter
+
+A Redmine plugin that replaces the repository's default syntax highlighting
+engine (CodeRay) with a cool syntax highlighter (render via js on browser).
+
+It uses {Alex's SyntaxHighlighter}[http://alexgorbatchev.com/SyntaxHighlighter/].
+
+= Installation:
+
+Use Rails' handy-dandy plugin installer to grab this plugin:
+
+  script/plugin install git://github.com/snowyu/redmine_js_syntax_highlighter.git
+
+Alternatively, you can just copy the <tt>redmine_js_syntax_highlighter</tt> directory into <tt>vendor/plugins/</tt>
+
+
+= Themes:
+
+The highlighter's default colour scheme ("theme") is currently {shThemeDefault}[http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/].
+
+Each user can change the colour scheme by going to "My account" and picking the theme from the dropdown list. 
+
+= Supported Languages:
+
+* ActionScript3     as3, actionscript3
+* Bash/Shell        bash,shell
+* C/C++             c,cpp
+* C#                c-sharp,csharp
+* CSS               css
+* ColdFusion        cf,codefusion
+* Diff              diff,patch
+* Delphi/Pascal     delphi,pas,pascal
+* Erlang            erl,erlang
+* Groovy            groovy
+* Java              java
+* JavaFX            jfx,javafx
+* JavaScript        js,jscript,Javascript
+* PHP               php
+* Perl              perl,pl
+* Plain Text        plain,text
+* Python            py,python
+* PowerShell        ps,powershell
+* Ruby              ruby,ror,rails
+* SQL               sql
+* Scala             scala
+* XML               xml,xhtml,xslt,html
+* Visual Baisc      vb, vbnet
+
+= Authors:
+
+* Originally by Riceball LEE({snowyu}[http://github.com/snowyu]) (2011)
+
+= License:
+
+Released under the [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License v2 (GPL)].
