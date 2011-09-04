@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_js_syntax_highlighter do
   name "Redmine Syntax highlighting Render on Browser plugin"
   author "Riceball LEE"
   description "Uses javascript to highlight files in the source code repository and wiki."
-  version "0.0.1"
+  version "0.1"
 
   # Create a dropdown list in the UI so the user can pick a theme.
   if UserCustomField.table_exists?
