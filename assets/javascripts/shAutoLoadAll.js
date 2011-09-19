@@ -14,6 +14,7 @@ function shLoadAllSyntaxHighlighters(aPath) {
     };
     
     SyntaxHighlighter.autoloader.apply(null, shApplyPath(
+      'text plain plaintext      @shBrushPlain.js',
       'applescript            @shBrushAppleScript.js',
       'actionscript3 as3      @shBrushAS3.js',
       'bash shell             @shBrushBash.js',
@@ -30,7 +31,6 @@ function shLoadAllSyntaxHighlighters(aPath) {
       'js jscript javascript java_script json  @shBrushJScript.js',
       'perl pl                @shBrushPerl.js',
       'php                    @shBrushPhp.js',
-      'text plain plaintext   @shBrushPlain.js',
       'py python              @shBrushPython.js',
       'ruby rails ror rb rhtml  @shBrushRuby.js',
       'sass scss              @shBrushSass.js',

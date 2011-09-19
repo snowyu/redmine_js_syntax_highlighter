@@ -8,15 +8,27 @@
 	<script type="text/javascript" src="javascripts/shAutoloader.js"></script>
 	<script type="text/javascript" src="javascripts/shAutoloadAll.js"></script>
 	<!--script type="text/javascript" src="javascripts/shBrushJScript.js"></script-->
-	<!--script type="text/javascript" src="javascripts/shBrushRuby.js"></script-->
+	<script type="text/javascript" src="javascripts/shBrushRuby.js"></script>
+    <!--script type="text/javascript" src="javascripts/shBrushPlain.js"></script-->
+
 	<link type="text/css" rel="stylesheet" href="stylesheets/shCoreDefault.css"/>
 	<!--script type="text/javascript">SyntaxHighlighter.all();</script-->
+<script type="text/javascript">
+//<![CDATA[
+/*document.observe("dom:loaded", function () {
+	shLoadAllSyntaxHighlighters("javascripts/");
+});*/
+//  body.onload="shLoadAllSyntaxHighlighters('javascripts/');"
+
+//]]>
+</script>
+	
 </head>
 
-<body style="background: white; font-family: Helvetica">
+<body style="background: white; font-family: Helvetica" onload="shLoadAllSyntaxHighlighters('javascripts/');">
 
 <h1>Hello SyntaxHighlighter</h1>
-<pre class="brush: js;">
+<pre class="brush: plaintext;">
 function helloSyntaxHighlighter()
 {
 	return "hi!";

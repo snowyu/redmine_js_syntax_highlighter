@@ -15,16 +15,18 @@ module Redmine
       ]   
          
       class << self
-        require 'coderay/helpers/file_type'
-        def highlight_by_filename(text, filename)
-          language = CodeRay::FileType.fetch(filename, :plaintext)
+        def highlight_by_filename(text, filename, encoding=true)
+          require 'coderay/helpers/file_type'
+          language = ::CodeRay::FileType.fetch(filename, :plaintext)
+          text = ERB::Util.h(text) if encoding
           language = :plaintext if [:yaml, :scheme, :debug].include?(language) 
-          "<pre class=\"brush: #{language};\">#{ERB::Util.h(text)}</pre>"
+          "<pre class=\"brush: #{language};\">#{text}</pre>"
         end
         
-        def highlight_by_language(text, language)
+        def highlight_by_language(text, language, encoding=true)
           language = :plaintext if [:yaml, :scheme, :debug].include?(language) 
-          "<pre class=\"brush: #{language};\">#{ERB::Util.h(text)}</pre>"
+          text = ERB::Util.h(text) if encoding
+          "<pre class=\"brush: #{language};\">#{text}</pre>"
         end
         
         def theme
@@ -44,7 +46,6 @@ module Redmine
             javascript_include_tag('shAutoLoadAll.js', :plugin => 'redmine_js_syntax_highlighter') +
             javascript_tag("document.observe(\"dom:loaded\", function () {shLoadAllSyntaxHighlighters(\"#{js_path}\");});")
           end
-            
         end
       end
     end
