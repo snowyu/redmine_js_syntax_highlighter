@@ -5,6 +5,8 @@ require 'js_syntax_patch'
 Redmine::Plugin.register :redmine_js_syntax_highlighter do
   name "Redmine Syntax highlighting Render on Browser plugin"
   author "Riceball LEE"
+  author_url "https://github.com/snowyu" 
+  url "https://github.com/snowyu/redmine_js_syntax_highlighter"
   description "Uses javascript to highlight files in the source code repository and wiki."
   version "0.1"
 
