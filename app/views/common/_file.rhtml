@@ -1,6 +1,6 @@
 <div class="autoscroll">
 <%
-def to_utf_8_for_attach(content)
+def to_utf8_for_attach(content)
 begin
   Redmine::CodesetUtil.to_utf8_by_setting(content)
 rescue NoMethodError
